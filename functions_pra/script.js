@@ -208,3 +208,30 @@ let tenPercentOff = discountCalculator(10);
 let twentyPercentOff = discountCalculator(20);
 
 console.log(tenPercentOff(100));
+
+// 👉 What happens to discount FIRST?
+// Function is called:
+// discountCalculator(10)
+// Parameter receives value:
+// discount = 10
+
+// ✔️ So at this moment:
+
+// A variable discount is created
+// Its value = 10
+
+// 🔹 Next step inside function:
+// return function (price) {
+//   return price - price * (discount / 100);
+// };
+
+// 👉 This inner function is created while discount = 10 exists
+
+// This line:
+// let tenPercentOff = discountCalculator(10);
+
+// 👉 Means:
+
+// discountCalculator(10) runs
+// It returns a function
+// That returned function is stored in tenPercentOff
