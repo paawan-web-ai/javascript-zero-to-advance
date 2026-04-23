@@ -198,16 +198,16 @@
 // ---------------------
 // discountcalculator
 
-function discountCalculator(discount) {
-  return function (price) {
-    return price - price * (discount / 100);
-  };
-}
+// function discountCalculator(discount) {
+//   return function (price) {
+//     return price - price * (discount / 100);
+//   };
+// }
 
-let tenPercentOff = discountCalculator(10);
-let twentyPercentOff = discountCalculator(20);
+// let tenPercentOff = discountCalculator(10);
+// let twentyPercentOff = discountCalculator(20);
 
-console.log(tenPercentOff(100));
+// console.log(tenPercentOff(100));
 
 // 👉 What happens to discount FIRST?
 // Function is called:
@@ -235,3 +235,43 @@ console.log(tenPercentOff(100));
 // discountCalculator(10) runs
 // It returns a function
 // That returned function is stored in tenPercentOff
+
+//------------------------------------------------------
+
+// function counter() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     return count;
+//   };
+// }
+// // “When I call c(), it executes the inner function and increments count.”
+
+// //  counter(1); // this is inner function
+// let c = counter();
+// console.log(c());
+// console.log(c());
+// console.log(c());
+// console.log(c());
+// // Now d has its own count
+// let d = counter();
+// console.log(d());
+
+//------------------------------------------------
+
+// create a pure function to transform a value
+
+// function abcd(val) {
+//   return val * 2;
+// }
+
+// console.log(abcd(2));
+
+//-----------------------------------------
+// use if-e to isolate variables
+
+(function () {
+  const password = "secret password";
+  console.log(password); // you can access it inside not outside
+})();
+// console.log(password); // password not defined
