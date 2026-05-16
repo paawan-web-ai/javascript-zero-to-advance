@@ -131,14 +131,98 @@
 
 //------------------------------
 
-// find return the 1 value which satisfic the condition
+// find - return the 1 value which satisfic the condition
 
-let arr = [
-  { id: 1, key: 1 },
-  { id: 2, key: 2 },
-  { id: 3, key: 1 },
-];
-let arr1 = arr.find((val) => {
-  return val.key === 1;
-});
-console.log(arr1);
+// let arr = [
+//   { id: 1, key: 1 },
+//   { id: 2, key: 2 },
+//   { id: 3, key: 1 },
+// ];
+// let arr1 = arr.find((val) => {
+//   return val.key === 1;
+// });
+// console.log(arr1);
+
+//------------------------------------
+// Some - 1 should pass the condition
+
+// let arr = [10, 30, 32, 90];
+// let any = arr.some(function (val) {
+//   return val > 85;
+// });
+
+// console.log(any);
+
+// -------------------------------------
+// every - everyone must pass the condition
+
+// let arr = [10, 30, 32, 90];
+// let eve = arr.every(function (val) {
+//   return val > 60;
+// });
+// console.log(eve);
+
+//-------------------------------------------
+
+// destruturing and spread operator
+
+//you want 1 element out in variable
+
+// let arr = [1, 2, 3, 4, 5, 6];
+// let [a, b] = arr;
+// console.log(a, b);
+
+//----no you dont want 3 but 4
+
+// let arr = [1, 2, 3, 4, 5];
+
+// let [a, b, , c] = arr;
+
+// console.log(a, b, c);
+
+//--------------------------------
+//spread
+
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// let arr2 = [...arr];
+// console.log(arr2);
+
+// -----------------------------------
+
+//Create an array with 3 fruits and print the second fruit
+
+// let fruit = ["banana", "apple", "mongoo"];
+// console.log(fruit[2]);
+
+// -----------------------------------
+
+//add "mongoo at the end and "pineapple at the beginning
+// of this arr
+
+// let fruit = ["banana", "apple"];
+
+// fruit.push("mongoo");
+// fruit.unshift("pineapple");
+
+// console.log(fruit);
+
+// -----------------------------------
+
+//replace "banana" with "kiwi" in the array above
+
+// let fruits = ["apple", "banana"];
+// fruits.pop();
+// fruits.push("kiwi");
+// console.log(fruits);
+
+// -----------------------------------
+
+//Insert "red" and "blue" at index 1 in this array
+
+// let colors = ["green", "yellow"];
+// colors.splice(0, 0, "red", "blue");
+// console.log(colors);
+
+//---------------------------------------
+
+// extract only the middle 3 elements from this array
