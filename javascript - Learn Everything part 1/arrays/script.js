@@ -226,3 +226,109 @@
 //---------------------------------------
 
 // extract only the middle 3 elements from this array
+
+// let items = [1, 2, 3, 4, 5, 6, 7];
+// let newitems = items.slice(2, 5);
+// console.log(newitems);
+
+//---------------------------------------
+
+//sort this array alphabetically and then reverse it:
+
+// let names = ["zara", "arjun", "mira", "bhavya"];
+
+// let newnames = names.sort().reverse();
+
+// console.log(newnames);
+
+//---------------------------------------
+
+// use .map() to square each number:
+
+// let arr = [1, 2, 3, 4, 5];
+
+// const newArr = arr.map((val) => {
+//   return val * val;
+// });
+// console.log(newArr);
+//---------------------------------------
+
+//use .filter() to keep numbers greater than 10:
+
+// let arr = [12, 4, 1, 6, 7, 22, 35, 65, 35];
+// let newArr = arr.filter((val) => {
+//   return val > 10;
+// });
+// console.log(newArr);
+
+//---------------------------------------
+
+// use .reduce() to find the sum of this array
+
+// let arr = [10, 20, 30];
+// let newArr = arr.reduce((accumilator, val) => {
+//   return accumilator + val;
+// }, 0);
+
+//---------------------------------------
+
+// use .find() to get the first number less than 10
+
+// let arr = [21, 12, 5, 6, 39];
+// let newArr = arr.find(function (val) {
+//   return val < 10;
+// });
+// console.log(newArr);
+
+//---------------------------------------
+
+// use .some() to check if any student has scored below 35://one value must be true
+
+// let arr = [21, 34, 55, 65, 12, 45];
+// let newArr = arr.some(function (val) {
+//   return val < 35;
+// });
+// console.log(newArr);
+
+//---------------------------------------
+
+// use .every() to check if all numbers are even
+// every value must be true
+// let arr = [2, 3, 4, 5, 6, 7, 8, 9];
+
+// let newArr = arr.every((val) => {
+//   return val % 2 === 0;
+// });
+// console.log(newArr);
+
+//---------------------------------------
+
+//destructure this array to get firstname and lastname
+
+// let fullName = ["Harsh", "Sharma"];
+// let [firstName, LastName] = fullName;
+// console.log(firstName, LastName);
+
+//--------------------------------------
+
+// merge two arrays using spread operator
+
+// let a = [1, 2];
+// let b = [3, 4];
+// let c = [...a, ...b];
+// console.log(c);
+
+//------------------------------------------
+
+//Add "india" to the start of this array using spread
+
+// let countries = ["usa", "uk"];
+// countries = ["india", ...countries];
+// console.log(countries);
+
+//----------------------------------------------
+
+//clone this array properly (not by reference)
+let arr = [1, 2, 3];
+let arr2 = [...arr];
+console.log(arr2);
