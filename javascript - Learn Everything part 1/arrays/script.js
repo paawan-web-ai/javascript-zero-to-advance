@@ -226,3 +226,45 @@
 //---------------------------------------
 
 // extract only the middle 3 elements from this array
+
+// let items = [1, 2, 3, 4, 5, 6];
+// let newitem = items.slice(1, 4);
+// console.log(newitem);
+
+//---------------------------------------
+//sort this array alphabetically and then reverse it:
+
+// let names = ["zara", "arjun", "mira", "bhavya"];
+// let newarr = names.sort().reverse();
+// console.log(newarr);
+
+//---------------------------------------
+//use .map() to square each number
+
+// let arr = [1, 2, 3, 4, 5];
+// let newarr = arr.map((val) => {
+//   return val * val;
+// });
+// console.log(newarr);
+
+//---------------------------------------
+
+//use .filter() to keep numbers greater than 10
+
+// let arr = [11, 2, 34, 5, 1, 3, 52];
+// let newarr = arr.filter((val) => {
+//   return val > 10;
+// });
+
+// console.log(newarr);
+
+// ---------------------------------------------
+
+//use reduce() to find the sum of this array
+
+let arr = [10, 20, 30];
+let newarr = arr.reduce((accumilator, val) => {
+  return accumilator + val;
+}, 0);
+
+console.log(newarr);
