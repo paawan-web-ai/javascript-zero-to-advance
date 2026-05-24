@@ -209,69 +209,49 @@
 
 // console.log(tenPercentOff(100));
 
-// 👉 What happens to discount FIRST?
-// Function is called:
-// discountCalculator(10)
-// Parameter receives value:
-// discount = 10
+//  tenPercentOff = discountCalculator(10);
 
-// ✔️ So at this moment:
+// After this runs, JavaScript secretly turns it almost into this:
 
-// A variable discount is created
-// Its value = 10
-
-// 🔹 Next step inside function:
-// return function (price) {
-//   return price - price * (discount / 100);
-// };
-
-// 👉 This inner function is created while discount = 10 exists
-
-// This line:
-// let tenPercentOff = discountCalculator(10);
-
-// 👉 Means:
-
-// discountCalculator(10) runs
-// It returns a function
-// That returned function is stored in tenPercentOff
-
-//------------------------------------------------------
-
-// function counter() {
-//   let count = 0;
-//   return function () {
-//     count++;
-//     return count;
-//   };
+// let tenPercentOff = function(price) {
+//    return price - price * (10 / 100);
 // }
-// // “When I call c(), it executes the inner function and increments count.”
+  //------------------------------------------------------
 
-// //  counter(1); // this is inner function
-// let c = counter();
-// console.log(c());
-// console.log(c());
-// console.log(c());
-// console.log(c());
-// // Now d has its own count
-// let d = counter();
-// console.log(d());
+  // function counter() {
+  //   let count = 0;
+  //   return function () {
+  //     count++;
+  //     return count;
+  //   };
+  // }
+  // // “When I call c(), it executes the inner function and increments count.”
 
-//------------------------------------------------
+  // //  counter(1); // this is inner function
+  // let c = counter();
+  // console.log(c());
+  // console.log(c());
+  // console.log(c());
+  // console.log(c());
+  // // Now d has its own count
+  // let d = counter();
+  // console.log(d());
 
-// create a pure function to transform a value
+  //------------------------------------------------
 
-// function abcd(val) {
-//   return val * 2;
-// }
+  // create a pure function to transform a value
 
-// console.log(abcd(2));
+  // function abcd(val) {
+  //   return val * 2;
+  // }
 
-//-----------------------------------------
-// use if-e to isolate variables
+  // console.log(abcd(2));
 
-(function () {
-  const password = "secret password";
-  console.log(password); // you can access it inside not outside
-})();
+  //-----------------------------------------
+  // use if-e to isolate variables
+
+  (function () {
+    const password = "secret password";
+    console.log(password); // you can access it inside not outside
+  })();
 // console.log(password); // password not defined
