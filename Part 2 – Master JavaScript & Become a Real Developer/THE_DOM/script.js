@@ -41,10 +41,19 @@
 
 // back space
 
-let input = document.querySelector("input");
+// let input = document.querySelector("input");
 
-input.addEventListener("input", (dets) => {
-  if (dets.data !== null) {
-    console.log(dets.data);
-  }
+// input.addEventListener("input", (dets) => {
+//   if (dets.data !== null) {
+//     console.log(dets.data);
+//   }
+// });
+
+//change event tab chalta hai jab aapka koi input select ya text area mein koi change hojaye
+
+let select = document.querySelector("select");
+let h3 = document.querySelector("h3");
+select.addEventListener("change", (dets) => {
+  // console.log(dets.target.value);
+  h3.textContent = `${dets.target.value} - Device Selected.`;
 });
