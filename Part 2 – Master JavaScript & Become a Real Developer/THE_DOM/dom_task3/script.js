@@ -1,6 +1,6 @@
 let form = document.querySelector("form");
 let inputs = document.querySelectorAll("input");
-let cardsContainer = document.querySelector("#cards-container");
+let main = document.querySelector("#main");
 form.addEventListener("submit", (dets) => {
   // console.log(dets);
   dets.preventDefault();
@@ -8,23 +8,22 @@ form.addEventListener("submit", (dets) => {
   let card = document.createElement("div");
   card.classList.add("card");
 
+  console.log(inputs);
+
   let profile = document.createElement("div");
   profile.classList.add("profile");
 
   let img = document.createElement("img");
-  img.setAttribute(
-    "src",
-    "https://plus.unsplash.com/premium_photo-1779753391100-6ed78213c5b4?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2fHx8ZW58MHx8fHx8",
-  );
+  img.setAttribute("src", inputs[0].value);
 
   let h3 = document.createElement("h3");
-  h3.textContent = "rahul";
+  h3.textContent = inputs[1].value;
 
   let h5 = document.createElement("h5");
-  h5.textContent = "stars";
+  h5.textContent = inputs[2].value;
 
   let p = document.createElement("p");
-  p.textContent = "all around him";
+  p.textContent = inputs[3].value;
 
   profile.appendChild(img);
   card.appendChild(profile);
@@ -32,5 +31,5 @@ form.addEventListener("submit", (dets) => {
   card.appendChild(h5);
   card.appendChild(p);
 
-  cardsContainer.appendChild(card);
+  main.appendChild(card);
 });
