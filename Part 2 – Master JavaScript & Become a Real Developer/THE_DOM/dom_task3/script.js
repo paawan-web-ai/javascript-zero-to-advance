@@ -32,4 +32,8 @@ form.addEventListener("submit", (dets) => {
   card.appendChild(p);
 
   main.appendChild(card);
+
+  inputs.forEach(function (input) {
+    if (input.type !== "submit") input.value = "";
+  });
 });
